@@ -1,4 +1,8 @@
-document.getElementById('container').onchange = function() {
+document.getElementById('container').onchange = change
+document.getElementById('billTotal').onkeyup = change
+
+
+function change() {
     var bill = Number (document.getElementById('billTotal').value);
     var tipPercent = document.getElementById('tipInput').value;
     var split = document.getElementById('splitInput').value;
@@ -10,4 +14,5 @@ document.getElementById('container').onchange = function() {
     document.getElementById('splitOutput').innerHTML = split;
     document.getElementById('newBill').innerHTML = "DKK " + newBillEach.toFixed(2);
     document.getElementById('tippp').innerHTML = "DKK " + tipEach.toFixed(2);
-}
+}	
+	
